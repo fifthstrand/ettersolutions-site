@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>David Etter, PhD</title>
-<meta name="description" content="David Etter, PhD, is a Principal AI Scientist at Etter Solutions LLC who trains, fine-tunes, evaluates, and deploys large vision-language models for multilingual OCR, event-centric video retrieval, anomaly retrieval in livestream video, and face recognition.">
-<meta property="og:title" content="David Etter, PhD">
+<title>David Etter, Ph.D. | Principal AI Scientist | Etter Solutions</title>
+<meta name="description" content="Multilingual OCR, video event retrieval, and vision-language model training. David Etter, Ph.D., Principal AI Scientist and consultant, Etter Solutions.">
+<meta property="og:title" content="David Etter, Ph.D. | Principal AI Scientist | Etter Solutions">
 <meta property="og:description" content="Vision-language models for event understanding in raw video and multilingual OCR at scale. Research, publications, and contact.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.ettersolutions.com/">
@@ -17,7 +17,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "David Etter",
-  "honorificSuffix": "PhD",
+  "honorificSuffix": "Ph.D.",
   "jobTitle": "Principal AI Scientist",
   "worksFor": { "@type": "Organization", "name": "Etter Solutions LLC", "url": "https://www.ettersolutions.com/" },
   "url": "https://www.ettersolutions.com/",
@@ -207,6 +207,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   color: var(--muted);
 }
 .readout { color: var(--muted); margin-top: -0.5rem; }
+.readout::before { content: attr(data-readout); }
 .lead {
   font-family: var(--font-display);
   font-size: clamp(1.375rem, 3vw, var(--step-2));
@@ -349,6 +350,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .work { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
 .work-title { font-weight: 600; line-height: 1.35; }
 .work p { color: var(--muted); max-width: 62ch; font-size: 1rem; }
+.work p.work-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; font-size: var(--step--1); }
 
 .year {
   font-family: var(--font-mono);
@@ -434,7 +436,7 @@ footer {
   <div class="hero-text">
     <p class="eyebrow">Principal AI Scientist &amp; Consultant</p>
     <h1 class="name"><span class="det">David</span> <span class="det">Etter</span><span class="suffix">Ph.D.</span></h1>
-    <p class="readout mono" aria-hidden="true">2 words · script: Latin · conf 0.99</p>
+    <p class="readout mono" aria-hidden="true" data-readout="2 words · script: Latin · conf 0.99"></p>
     <p class="lead">Vision-language models for event understanding in raw video and multilingual OCR at scale.</p>
     <p class="bio">David Etter is an applied AI/ML research scientist with over 25 years of experience partnering with industry and academic labs. Since 2006, he has operated Etter Solutions LLC, leading technical efforts across large-scale video retrieval, vision-language model training, optical character recognition across diverse writing systems, and visual anomaly detection. His recent work focuses on high-throughput data pipelines, multimodal retrieval-augmented generation (RAG) over raw video feeds, and robust evaluation benchmarks.</p>
     <ul class="links">
@@ -474,10 +476,11 @@ footer {
       </div>
       <p>Thousands of public livestream cameras run continuously around the world. Most of what they capture is static, or shows the typical activity for that place and time of day, and there is far too much of it for a person to watch. This work defines an anomaly as an event that is rare in a camera's own history, and asks a system to rank each camera's clips by how likely they are to be anomalous, with no query and no predefined list of anomaly types.</p>
       <p><strong>MultiVENT-Raw Anomaly</strong> is a benchmark for this open-set task, built from livestream cameras captured globally between June 2025 and April 2026. Evaluations with both vision-feature and vision-language model approaches show the task remains hard for current models.</p>
+      <p>The work grew out of the 2026 SCALE workshop on <a href="https://hltcoe.jhu.edu/research/scale/scale-2026/">event understanding and summarization from real-time videos</a>. A paper is in preparation.</p>
       <dl class="facts">
         <div><dt>livestream cameras</dt><dd>34</dd></div>
         <div><dt>video clips</dt><dd>5,859</dd></div>
-        <div><dt>human-annotated anomalies</dt><dd>76</dd></div>
+        <div><dt>human-annotated anomalies, about 1 in 77 clips</dt><dd>76</dd></div>
       </dl>
     </article>
 
@@ -490,13 +493,15 @@ footer {
           <div class="work">
             <a class="work-title" href="https://arxiv.org/abs/2609.28437">MultiVENT-Raw: A Benchmark for Retrieval and Reasoning over Raw Videos</a>
             <p>Nearly 120,000 mostly raw videos (over 5,300 hours) from phones, hand-held cameras, and CCTV, paired with 130 events and 222 event-centric queries. Supports both retrieval and report generation over footage that has no script, captions, or graphics to lean on.</p>
+            <p class="work-links mono"><a href="https://huggingface.co/datasets/hltcoe/multivent-raw">Dataset</a></p>
           </div>
         </li>
         <li>
           <span class="venue">CVPR 2025</span>
           <div class="work">
-            <a class="work-title" href="https://arxiv.org/abs/2410.11619">MultiVENT 2.0: A Massive Multilingual Benchmark for Event-Centric Video Retrieval</a>
+            <a class="work-title" href="https://openaccess.thecvf.com/content/CVPR2025/html/Kriz_MultiVENT_2.0_A_Massive_Multilingual_Benchmark_for_Event-Centric_Video_Retrieval_CVPR_2025_paper.html">MultiVENT 2.0: A Massive Multilingual Benchmark for Event-Centric Video Retrieval</a>
             <p>More than 218,000 news videos and 3,906 queries targeting specific world events. State-of-the-art vision-language models struggle on it.</p>
+            <p class="work-links mono"><a href="https://huggingface.co/datasets/hltcoe/MultiVENT2.0">Dataset</a><a href="https://arxiv.org/abs/2410.11619">arXiv</a></p>
           </div>
         </li>
         <li>
@@ -516,8 +521,9 @@ footer {
         <li>
           <span class="venue">NeurIPS 2023</span>
           <div class="work">
-            <a class="work-title" href="https://arxiv.org/abs/2307.03153">MultiVENT: Multilingual Videos of Events and Aligned Natural Text</a>
+            <a class="work-title" href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/a054ff49751dbc991ec30ae479397c3d-Abstract-Datasets_and_Benchmarks.html">MultiVENT: Multilingual Videos of Events and Aligned Natural Text</a>
             <p>About 2,400 event-centric videos grounded in text documents across five languages (Arabic, Chinese, English, Korean, and Russian), mixing news broadcasts with first-hand footage.</p>
+            <p class="work-links mono"><a href="https://github.com/katesanders9/multiVENT">Data and code</a><a href="https://arxiv.org/abs/2307.03153">arXiv</a></p>
           </div>
         </li>
       </ul>
@@ -633,9 +639,9 @@ footer {
   <div class="rail"><h2>Education</h2></div>
   <div class="content">
     <ul class="degrees">
-      <li><span class="year">2015</span><div><strong>PhD, Computer Science</strong><span class="school">George Mason University</span></div></li>
-      <li><span class="year">2001</span><div><strong>MS, Computer and Information Sciences</strong><span class="school">Hood College</span></div></li>
-      <li><span class="year">1994</span><div><strong>BA, Mathematics</strong><span class="school">Shippensburg University</span></div></li>
+      <li><span class="year">2015</span><div><strong>Ph.D., Computer Science</strong><span class="school">George Mason University</span></div></li>
+      <li><span class="year">2001</span><div><strong>M.S., Computer and Information Sciences</strong><span class="school">Hood College</span></div></li>
+      <li><span class="year">1994</span><div><strong>B.A., Mathematics</strong><span class="school">Shippensburg University</span></div></li>
     </ul>
   </div>
 </section>
