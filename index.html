@@ -558,27 +558,27 @@ footer {
   <div class="rail"><h2>Recent projects</h2></div>
   <div class="content">
     <div class="topic">
-      <p>Three systems built in 2026 with the Johns Hopkins HLTCOE. Papers are in preparation.</p>
+      <p>Work from 2026 with the Johns Hopkins HLTCOE.</p>
       <ul class="works">
         <li>
           <span class="venue">2026</span>
           <div class="work">
             <span class="work-title">DenseIndex: latent-term indexing of dense video embeddings</span>
-            <p>Makes dense video embeddings searchable from a standard Lucene index, with no vector database. Sparse autoencoders trained over frozen SigLIP2 and Qwen3-VL embedders turn each embedding into a small bag of discrete latent terms that index and score like text. On 143,000 video chunks it answers a query in 43 ms on one CPU thread, builds the index in three minutes, and keeps 72–93% of exact dense retrieval quality on short queries.</p>
+            <p>Search over dense video embeddings from a plain Lucene index, with no vector database. A sparse autoencoder is trained on the output of a frozen embedder (SigLIP2 or Qwen3-VL), and its active units become the words of each video chunk, so an ordinary inverted index can store and score them. Over 143,000 video chunks a query takes 43 ms on a single CPU thread, and once the chunks are embedded, indexing all of them takes about three minutes; 72–93% of exact dense-retrieval quality is kept on short queries.</p>
           </div>
         </li>
         <li>
           <span class="venue">SCALE 2026</span>
           <div class="work">
             <span class="work-title">Grounded Sightings: evidence-calibrated aircraft identification from airfield video</span>
-            <p>An agentic pipeline that turns aircraft sightings in airport video into grounded, verified claims: GroundingDINO and SAM3 detection and tracking, gallery matching against ACID-26 (a 155-variant aircraft gallery of 1,940 images built from Wikimedia Commons), and a tool-calling vision-language agent that checks tail numbers against the FAA and OpenSky registries and reports thin evidence as unidentified. Took first place on the SCALE 2026 airfield leaderboard.</p>
+            <p>Aircraft identification from airport video that only says what it can back up. GroundingDINO and SAM3 find and track each aircraft; the crop is matched against ACID-26, a gallery of 155 aircraft types and 1,940 images assembled from Wikimedia Commons; and a vision-language agent with tool access looks up any legible tail number in the FAA and OpenSky registries. When the evidence is weak the aircraft is reported as unidentified rather than guessed. First on the SCALE 2026 airfield leaderboard.</p>
           </div>
         </li>
         <li>
           <span class="venue">SCALE 2026</span>
           <div class="work">
             <span class="work-title">Contextual OCR: reading, tracking, and describing every piece of text in a video</span>
-            <p>Reads the text in a video in context: one entity per physical piece of text, with its transcript, translation, appearance, and location over time. Predictions are scored entity by entity and slot by slot with no LLM judge, so hallucinated and duplicate entities count against a system. The SignTracker system, in which a vision-language model reads every frame in full and sightings are tracked and merged across frames, raised entity F1 from 0.44 to 0.53 over the end-to-end baseline on the SCALE 2026 scene-text evaluation.</p>
+            <p>OCR for video that keeps track of what it has read. Each physical piece of text in a clip becomes one entity with a transcript, a translation, a description of its appearance, and where and when it was on screen. The scorer matches predicted entities to reference entities one to one and grades each field separately, with no LLM in the loop, so a system gains nothing by hallucinating or repeating itself. SignTracker, the system built for the task, has a vision-language model read every frame in full and then tracks and merges the sightings; it lifted entity F1 from 0.44 to 0.53 over the end-to-end baseline on the SCALE 2026 scene-text evaluation.</p>
           </div>
         </li>
       </ul>
