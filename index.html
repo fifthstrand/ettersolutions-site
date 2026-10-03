@@ -349,6 +349,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .venue .won { display: block; color: var(--award); font-weight: 500; }
 .work { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
 .work-title { font-weight: 600; line-height: 1.35; }
+span.work-title { color: var(--ink); }
 .work p { color: var(--muted); max-width: 62ch; font-size: 1rem; }
 .work p.work-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; font-size: var(--step--1); }
 
@@ -423,6 +424,7 @@ footer {
   <a class="mark" href="#top">Etter Solutions LLC</a>
   <nav aria-label="Sections">
     <a href="#focus">Focus areas</a>
+    <a href="#projects">Projects</a>
     <a href="#scale">SCALE</a>
     <a href="#publications">Publications</a>
     <a href="#education">Education</a>
@@ -474,6 +476,13 @@ footer {
       <p>Most video retrieval benchmarks match short visual descriptions against small collections of edited, English-language clips. The MultiVENT collections are built around real-world events in many languages, where the evidence may sit in the picture, the audio, on-screen text, or the metadata.</p>
       <ul class="works">
         <li>
+          <span class="venue">In preparation</span>
+          <div class="work">
+            <span class="work-title">MultiVENT-Raw Anomaly: open-set anomaly retrieval in continuous livestream video</span>
+            <p>Defines an anomaly as an event that is rare in a camera's own history and asks a system to rank each camera's clips by anomaly likelihood, with no query and no predefined taxonomy. Built from 34 public livestream cameras captured between June 2025 and April 2026: 5,859 clips with 76 human-annotated anomalies, about 1 in 77. Evaluations with vision-feature and vision-language model approaches show the task remains hard for current models. The work grew out of the <a href="https://hltcoe.jhu.edu/research/scale/scale-2026/">2026 SCALE workshop</a>.</p>
+          </div>
+        </li>
+        <li>
           <span class="venue">arXiv 2026</span>
           <div class="work">
             <a class="work-title" href="https://arxiv.org/abs/2609.28437">MultiVENT-Raw: A Benchmark for Retrieval and Reasoning over Raw Videos</a>
@@ -487,20 +496,6 @@ footer {
             <a class="work-title" href="https://openaccess.thecvf.com/content/CVPR2025/html/Kriz_MultiVENT_2.0_A_Massive_Multilingual_Benchmark_for_Event-Centric_Video_Retrieval_CVPR_2025_paper.html">MultiVENT 2.0: A Massive Multilingual Benchmark for Event-Centric Video Retrieval</a>
             <p>More than 218,000 news videos and 3,906 queries targeting specific world events. State-of-the-art vision-language models struggle on it.</p>
             <p class="work-links mono"><a href="https://huggingface.co/datasets/hltcoe/MultiVENT2.0">Dataset</a><a href="https://arxiv.org/abs/2410.11619">arXiv</a></p>
-          </div>
-        </li>
-        <li>
-          <span class="venue">SIGIR 2025</span>
-          <div class="work">
-            <a class="work-title" href="https://doi.org/10.1145/3726302.3730157">MMMORRF: Multimodal Multilingual Modularized Reciprocal Rank Fusion</a>
-            <p>A video search system that extracts text and features from both the visual and audio channels and combines them with modality-aware reciprocal rank fusion. Improves nDCG@20 by 81% over leading multimodal encoders and 37% over single-modality retrieval.</p>
-          </div>
-        </li>
-        <li>
-          <span class="venue">EMNLP Findings 2024</span>
-          <div class="work">
-            <a class="work-title" href="https://doi.org/10.18653/v1/2024.findings-emnlp.934">Grounding Partially-Defined Events in Multimodal Data</a>
-            <p>Introduces MultiVENT-G: 14.5 hours of densely annotated current-event video and 1,168 text documents, with 22.8K labeled event-centric entities.</p>
           </div>
         </li>
         <li>
@@ -543,21 +538,6 @@ footer {
     </article>
 
     <article class="topic">
-      <div class="topic-head">
-        <h3>Anomaly retrieval in livestream video</h3>
-        <span class="status">In preparation</span>
-      </div>
-      <p>Thousands of public livestream cameras run continuously around the world. Most of what they capture is static, or shows the typical activity for that place and time of day, and there is far too much of it for a person to watch. This work defines an anomaly as an event that is rare in a camera's own history, and asks a system to rank each camera's clips by how likely they are to be anomalous, with no query and no predefined list of anomaly types.</p>
-      <p><strong>MultiVENT-Raw Anomaly</strong> is a benchmark for this open-set task, built from livestream cameras captured globally between June 2025 and April 2026. Evaluations with both vision-feature and vision-language model approaches show the task remains hard for current models.</p>
-      <p>The work grew out of the 2026 SCALE workshop on <a href="https://hltcoe.jhu.edu/research/scale/scale-2026/">event understanding and summarization from real-time videos</a>. A paper is in preparation.</p>
-      <dl class="facts">
-        <div><dt>livestream cameras</dt><dd>34</dd></div>
-        <div><dt>video clips</dt><dd>5,859</dd></div>
-        <div><dt>human-annotated anomalies, about 1 in 77 clips</dt><dd>76</dd></div>
-      </dl>
-    </article>
-
-    <article class="topic">
       <div class="topic-head"><h3>Face recognition</h3></div>
       <p>Deep learning models for fast, scalable, and accurate face recognition across a wide range of camera capture settings. The work covers training data and techniques that reduce model bias across gender and ethnicity, metric-learning loss functions, score calibration, and evaluation on the open-set 1:N protocol of the IARPA Janus IJB-C benchmark. More recent models use Vision Transformers and masked autoencoder pretraining.</p>
       <ul class="works">
@@ -571,6 +551,38 @@ footer {
       </ul>
     </article>
 
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="rail"><h2>Recent projects</h2></div>
+  <div class="content">
+    <div class="topic">
+      <p>Three systems built in 2026 with the Johns Hopkins HLTCOE. Papers are in preparation.</p>
+      <ul class="works">
+        <li>
+          <span class="venue">2026</span>
+          <div class="work">
+            <span class="work-title">DenseIndex: latent-term indexing of dense video embeddings</span>
+            <p>Makes dense video embeddings searchable from a standard Lucene index, with no vector database. Sparse autoencoders trained over frozen SigLIP2 and Qwen3-VL embedders turn each embedding into a small bag of discrete latent terms that index and score like text. On 143,000 video chunks it answers a query in 43 ms on one CPU thread, builds the index in three minutes, and keeps 72–93% of exact dense retrieval quality on short queries.</p>
+          </div>
+        </li>
+        <li>
+          <span class="venue">SCALE 2026</span>
+          <div class="work">
+            <span class="work-title">Grounded Sightings: evidence-calibrated aircraft identification from airfield video</span>
+            <p>An agentic pipeline that turns aircraft sightings in airport video into grounded, verified claims: GroundingDINO and SAM3 detection and tracking, gallery matching against ACID-26 (a 155-variant aircraft gallery of 1,940 images built from Wikimedia Commons), and a tool-calling vision-language agent that checks tail numbers against the FAA and OpenSky registries and reports thin evidence as unidentified. Took first place on the SCALE 2026 airfield leaderboard.</p>
+          </div>
+        </li>
+        <li>
+          <span class="venue">SCALE 2026</span>
+          <div class="work">
+            <span class="work-title">Contextual OCR: reading, tracking, and describing every piece of text in a video</span>
+            <p>Reads the text in a video in context: one entity per physical piece of text, with its transcript, translation, appearance, and location over time. Predictions are scored entity by entity and slot by slot with no LLM judge, so hallucinated and duplicate entities count against a system. The SignTracker system, in which a vision-language model reads every frame in full and sightings are tracked and merged across frames, raised entity F1 from 0.44 to 0.53 over the end-to-end baseline on the SCALE 2026 scene-text evaluation.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
