@@ -479,7 +479,7 @@ footer {
           <span class="venue">In preparation</span>
           <div class="work">
             <span class="work-title">MultiVENT-Raw Anomaly: find the events that are rare in each camera's own visual history</span>
-            <p>Whether a crane on a pier is a routine delivery or a one-off depends on that camera's own weeks of footage, so the task is open set: no anomaly classes and no training split. The test collection is 34 anonymized live-stream cameras, 4,666 videos in 5,859 chunks of up to five minutes, with 76 anomalous chunks, roughly 1 in 77. Each camera is one query, every chunk in its archive gets an anomaly score, and the ranking is scored with nDCG@10 averaged over cameras. The best system filters chunks with SigLIP, detects objects with YOLO, judges each chunk against a VLM profile of what is normal for that camera, and links events with an LLM to recover missed chunks. The work grew out of the <a href="https://hltcoe.jhu.edu/research/scale/scale-2026/">2026 SCALE workshop</a>.</p>
+            <p>Whether a crane on a pier is a routine delivery or a one-off depends on that camera's own weeks of footage, so the task is open set: no anomaly classes and no training split. The test collection is 34 anonymized live-stream cameras, 4,666 videos in 5,859 chunks of up to five minutes, with 76 anomalous chunks, roughly 1 in 77. Each camera is one query, every chunk in its archive gets an anomaly score, and the ranking is scored with nDCG@10 averaged over cameras. The work grew out of the <a href="https://hltcoe.jhu.edu/research/scale/scale-2026/">2026 SCALE workshop</a>.</p>
           </div>
         </li>
         <li>
@@ -571,7 +571,7 @@ footer {
           <span class="venue">2026</span>
           <div class="work">
             <span class="work-title">Aircraft Identification: every aircraft in an airfield clip, with its type, operator, tail number, and phase</span>
-            <p>A detector draws a box around every aircraft and stops. This task asks what the aircraft is, who operates it, whether it is taking off or landing, and what its tail number says. The MicroAirfield test collection holds 25 live-stream clips from 22 airports in 8 countries, with 186 annotated aircraft across 30 airframe families and 51 operators, each with a bounding-box tube and slots for family, operator, phase, tail number, and description. Scoring matches predicted aircraft one-to-one to annotated ones, so duplicates and false positives cost precision, then grades each slot. The best system tracks every aircraft, has Qwen-27B describe it, and lets task-specific experts override the base: a few-shot SigLIP2 family classifier, the airport's airline list for the operator, OCR checked against the FAA and OpenSky registries for the tail number, and box motion for the phase.</p>
+            <p>A detector draws a box around every aircraft and stops. This task asks what the aircraft is, who operates it, whether it is taking off or landing, and what its tail number says. The MicroAirfield test collection holds 25 live-stream clips from 22 airports in 8 countries, with 186 annotated aircraft across 30 airframe families and 51 operators, each with a bounding-box tube and slots for family, operator, phase, tail number, and description. Scoring matches predicted aircraft one-to-one to annotated ones, so duplicates and false positives cost precision, then grades each slot.</p>
           </div>
         </li>
         <li>
